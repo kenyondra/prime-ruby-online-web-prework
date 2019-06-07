@@ -1,15 +1,9 @@
-def prime?(x)
-  if x == 1 
-    return true 
-  elsif x < 1 
-    return false
-  else
-  for y in 2..(x-1)
-    if (x % y) == 0 
-      return false 
-    end
-  end
+def prime?(number_to_test)
+  return false if number_to_test < 2 
+  (2..math.sqrt(number_to_test)).each do num
+    return false if number_to_test % num == 0 
 end
-
 true
-end
+
+
+
